@@ -1,4 +1,5 @@
 fn main() {
-    let mut spaces = "   ";
-    spaces = spaces.len();
+    let x = 2.0;  // f64
+
+    let y: f32 = 3.0; // f32
 }
