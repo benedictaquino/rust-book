@@ -1,5 +1,3 @@
 fn main() {
-    let c = 'z';
-    let z = 'ℤ';
-    let heart_eyed_cat = '😻';
+    let tup: (i32, f64, u8) = (500, 6.1, 1);
 }
