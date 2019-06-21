@@ -1,12 +1,12 @@
 use std::io;
 
 fn main() {
-    println!("Choose option:");
-    println!("1: Fahrenheit to Celsius");
-    println!("2: Celsius to Fahrenheit");
-    println!("3: Quit");
-
     loop {
+        println!("Choose option:");
+        println!("1: Fahrenheit to Celsius");
+        println!("2: Celsius to Fahrenheit");
+        println!("3: Quit");
+
         let mut option = String::new();
 
         io::stdin().read_line(&mut option)
@@ -33,9 +33,9 @@ fn convert_temperature(option: &u8) {
     let mut temperature: (f64, char) = (32.0, 'F');
     let new_temperature: (f64, char);
 
-    println!("Please enter temperature:");
-
     loop {
+        println!("Please enter temperature:");
+
         let mut temperature_string = String::new();
 
         io::stdin().read_line(&mut temperature_string)
