@@ -5,7 +5,7 @@ fn main() {
         println!("Choose option:");
         println!("1: Fahrenheit to Celsius");
         println!("2: Celsius to Fahrenheit");
-        println!("3: Quit");
+        println!("0: Quit");
 
         let mut option = String::new();
 
@@ -17,15 +17,12 @@ fn main() {
             Err(_) => continue,
         };
 
-        if option == 1 {
-            convert_temperature(&option);
-            break;
-        } else if option == 2 {
-            convert_temperature(&option);
-            break;
-        } else if option == 3 {
-            break;
-        } 
+        if option > 2 {
+            continue
+        } else if option != 0 {
+            convert_temperature(&option)
+        }
+        break;
     }
 }
 
