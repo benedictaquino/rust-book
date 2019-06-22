@@ -3,7 +3,7 @@ fn main() {
 
     let len = s.len();
 
-    let slice = &s[3..len];
-    let slice = &s[3..];
+    let slice = &s[0..len];
+    let slice = &s[..];
 }
 
