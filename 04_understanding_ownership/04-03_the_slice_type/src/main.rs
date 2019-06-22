@@ -1,7 +1,9 @@
 fn main() {
     let s = String::from("hello world");
 
-    let slice = &s[0..2];
-    let slice = &s[..2];
+    let len = s.len();
+
+    let slice = &s[3..len];
+    let slice = &s[3..];
 }
 
