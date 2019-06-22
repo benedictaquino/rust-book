@@ -1,10 +1,16 @@
 fn main() {
-    let some_string = String::from("hello world");
-    
-    let word1 = first_word(&some_string);
-    let word2 = second_word(&some_string);
-    println!("The first word in '{}' is '{}'.", some_string, word1);
-    println!("The second word in '{}' is '{}'.", some_string, word2);
+    let my_string = String::from("hello world");
+
+    // first_word works on slices of `String`s
+    let word = first_word(&my_string[..]);
+
+    let my_string_literal = "hello world";
+
+    let word = first_word(&my_string_literal[..]);
+
+    // Because string literals *are* string slices already,
+    // this works too, without hte slice syntax!
+    let word = first_word(my_string_literal);
 }
 
 fn first_word(s: &str) -> &str {
