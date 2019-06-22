@@ -1,9 +1,11 @@
 fn main() {
-    let some_string = String::from("hello world");
-    let word1 = first_word(&some_string);
-    let word2 = second_word(&some_string);
-    println!("The first word in '{}' is '{}'.", some_string, word1);
-    println!("The second word in '{}' is '{}'.", some_string, word2);
+    let mut s = String::from("hello world");
+    
+    let word = first_word(&s);
+
+    s.clear();
+
+    println!("The first word in '{}' is '{}'.", s, word);
 }
 
 fn first_word(s: &String) -> &str {
