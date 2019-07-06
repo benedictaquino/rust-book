@@ -71,14 +71,19 @@ fn value_in_cents(coin: Coin) -> u8 {
     }
 }
 
-fn main() {
-    let penny = Coin::Penny;
-    let nickel = Coin::Nickel;
-    let dime = Coin::Dime;
-    let quarter = Coin::Quarter(UsState::NewJersey);
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
 
-    println!("The value of a penny in cents is {}.", value_in_cents(penny));
-    println!("The value of a nickel in cents is {}.", value_in_cents(nickel));
-    println!("The value of a dime in cents is {}.", value_in_cents(dime));
-    println!("The value of a quarter in cents is {}.", value_in_cents(quarter));
+fn main() {
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+
+    println!("five holds the value: {:?}", five);
+    println!("six holds the value: {:?}", six);
+    println!("none holds the value: {:?}", none);
 }
